@@ -2,8 +2,8 @@ package ir.adad.sampleapp;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -12,27 +12,22 @@ import org.json.JSONObject;
 
 import java.util.Random;
 
-import ir.adad.client.AdListener;
 import ir.adad.client.Adad;
+import ir.adad.client.InterstitialAdListener;
 
 public class GameActivity extends AppCompatActivity implements View.OnClickListener{
     public int mFirstNum;
     public int mSecondNum;
 
-    private AdListener mAdListener = new AdListener() {
+    private InterstitialAdListener mAdListener = new InterstitialAdListener() {
         @Override
         public void onAdLoaded() {
-            Toast.makeText(getApplicationContext(), "Ad loaded", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Interstitial Ad loaded", Toast.LENGTH_LONG).show();
         }
 
         @Override
         public void onAdFailedToLoad() {
-            Toast.makeText(getApplicationContext(),"Ad failed to load", Toast.LENGTH_LONG).show();
-        }
-
-        @Override
-        public void onAdOpened() {
-            Toast.makeText(getApplicationContext(),"Ad opened", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Interstitial Ad failed to load", Toast.LENGTH_LONG).show();
         }
 
         @Override
@@ -41,8 +36,13 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
         @Override
         public void onRemoveAdsRequested() {
-            Toast.makeText(getApplicationContext(),"User requested to remove ads from app", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "User requested to remove interstitial ads from app", Toast.LENGTH_LONG).show();
             //Move your user to shopping center of your app
+        }
+
+        @Override
+        public void onInterstitialAdDisplayed() {
+
         }
 
         @Override
