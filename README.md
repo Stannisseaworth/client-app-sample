@@ -1,2 +1,2 @@
 # client-app-sample
-Sample app for using AdadClient v3
+Sample app for using AdadClient v3.1
