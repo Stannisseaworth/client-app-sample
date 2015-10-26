@@ -18,12 +18,12 @@ public class MainActivity extends Activity{
 
         @Override
         public void onAdLoaded() {
-            Toast.makeText(getApplicationContext(), "Banner Ad loaded", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Banner Ad loaded", Toast.LENGTH_SHORT).show();
         }
 
         @Override
         public void onAdFailedToLoad() {
-            Toast.makeText(getApplicationContext(),"Banner ad failed to load", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"Banner ad failed to load", Toast.LENGTH_SHORT).show();
         }
 
         @Override
@@ -33,7 +33,7 @@ public class MainActivity extends Activity{
 
         @Override
         public void onRemoveAdsRequested() {
-            Toast.makeText(getApplicationContext(), "User requested to remove Banner ads from app", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "User requested to remove Banner ads from app", Toast.LENGTH_SHORT).show();
             //Move your user to shopping center of your app
         }
 

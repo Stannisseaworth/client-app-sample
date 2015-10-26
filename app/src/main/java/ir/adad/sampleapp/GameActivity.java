@@ -22,12 +22,12 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     private InterstitialAdListener mAdListener = new InterstitialAdListener() {
         @Override
         public void onAdLoaded() {
-            Toast.makeText(getApplicationContext(), "Interstitial Ad loaded", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Interstitial Ad loaded", Toast.LENGTH_SHORT).show();
         }
 
         @Override
         public void onAdFailedToLoad() {
-            Toast.makeText(getApplicationContext(), "Interstitial Ad failed to load", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Interstitial Ad failed to load", Toast.LENGTH_SHORT).show();
         }
 
         @Override
@@ -36,7 +36,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
         @Override
         public void onRemoveAdsRequested() {
-            Toast.makeText(getApplicationContext(), "User requested to remove interstitial ads from app", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "User requested to remove interstitial ads from app", Toast.LENGTH_SHORT).show();
             //Move your user to shopping center of your app
         }
 
@@ -47,7 +47,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
         @Override
         public void onInterstitialClosed() {
-            Toast.makeText(getApplicationContext(),"Interstitial Ad closed", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"Interstitial Ad closed", Toast.LENGTH_SHORT).show();
         }
     };
 
